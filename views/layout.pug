@@ -3,10 +3,11 @@ html
   head
     title Knowledgebase
     link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet' href='/css/style.css')
   body
     // imported from view-source:https://getbootstrap.com/docs/5.2/examples/
     // and converted from https://html2jade.org/
-    header.navbar.navbar-expand-lg.navbar-dark.bd-navbar.sticky-top
+  header.navbar.navbar-expand-lg.navbar-dark.bd-navbar.sticky-top
   nav.container-xxl.bd-gutter.flex-wrap.flex-lg-nowrap(aria-label='Main navigation')
     .d-lg-none(style='width: 1.5rem;')
     a.navbar-brand.p-0.me-0.me-lg-2(href='/' aria-label='Knowledgebase')
@@ -38,3 +39,6 @@ html
         hr
         footer 
           p Copyright &copy; 2022
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+    script(src='/js/main.js')
