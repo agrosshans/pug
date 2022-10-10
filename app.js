@@ -117,6 +117,18 @@ app.post('/articles/edit/:id', function(req,res){
     });
 });
 
+// delete article
+app.delete('/article/:id', function(req,res){
+  let query = {_id:req.params.id}
+
+  Article.remove(query, function(err){
+    if(err){
+        console.log(err);
+    }
+    res.send('Successfully deleted')
+  });
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 });
