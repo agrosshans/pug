@@ -14,18 +14,17 @@ html
         li.nav-item
           a.nav-link.active(href='/' aria-current='page') Home
         li.nav-item
-          a.nav-link(href='#') List Articles
+          a.nav-link(href='/') List Articles
         li.nav-item
           a.nav-link(href='/articles/add') Add Articles
         li.nav-item
           a.nav-link(href='https://icons.getbootstrap.com/') Bootstrap icons
-
     .container
       block content
         br
-        hr
-        footer 
-          p Copyright &copy; 2022
-    script(src='/bower_components/jquery/dist/jquery.js')
-    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
-    script(src='/js/main.js')
+          hr
+    footer 
+        p Copyright &copy; 2022
+        script(src='/bower_components/jquery/dist/jquery.js')
+        script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+        script(src='/js/main.js')

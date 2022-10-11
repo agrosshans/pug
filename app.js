@@ -33,7 +33,6 @@ let Article = require('./models/article.js')
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-
 // body-parser middleware parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -42,6 +41,8 @@ app.use(bodyParser.json())
 
 // set public folder
 app.use(express.static(path.join(__dirname, 'public')));
+
+// add routes
 
 app.get('/', function(req, res){
     Article.find({}, function(err, articles){
@@ -55,7 +56,7 @@ app.get('/', function(req, res){
     });
 });
 
-// add route
+
 app.get('/articles/add', function(req,res){
     res.render('add_articles.pug', {
         title: "Add Article",
@@ -65,7 +66,7 @@ app.get('/articles/add', function(req,res){
 // get single article by id
 app.get('/article/:id', function(req,res){
     Article.findById(req.params.id, function(err, article){
-        res.render('article', {
+        res.render('article.pug', {
         article:article
     });
   });
